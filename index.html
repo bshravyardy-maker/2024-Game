@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pastel 2048</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>2048</h1>
+                <div class="scores-container">
+                    <div class="score-box">
+                        <div class="score-title">SCORE</div>
+                        <div class="score-value" id="score">0</div>
+                    </div>
+                    <div class="score-box">
+                        <div class="score-title">BEST</div>
+                        <div class="score-value" id="best-score">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <p class="subtitle">Join the numbers and get to the <strong>2048 tile!</strong></p>
+                <div class="controls">
+                    <button id="undo-btn" class="btn">Undo</button>
+                    <button id="new-game-btn" class="btn">New Game</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="grid-background" id="grid">
+                <!-- 16 empty cells -->
+                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+                <div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div><div class="grid-cell"></div>
+            </div>
+            <div class="tiles-container" id="tiles-container">
+                <!-- Tiles will be injected conditionally via JS -->
+            </div>
+            <div class="game-message" id="game-message">
+                <p id="message-text">Game Over!</p>
+                <div class="message-buttons">
+                    <button class="btn" id="keep-playing-btn">Keep Playing</button>
+                    <button class="btn" id="retry-btn">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
